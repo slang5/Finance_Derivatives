@@ -1,36 +1,4 @@
 import numpy as np
-import multiprocessing
-import time
-
-'''def monte_carlo_batch(n_simulations):
-    """ Simule plusieurs trajectoires en batch """
-    S0, r, sigma, T, N = 100, 0.05, 0.2, 1, 100
-    dt = T / N
-    Z = np.random.standard_normal((N, n_simulations))  # Génère les chocs aléatoires
-    S = S0 * np.exp(np.cumsum((r - 0.5 * sigma**2) * dt + sigma * np.sqrt(dt) * Z, axis=0))
-    return np.mean(S[-1, :])  # Moyenne des prix finaux'''
-
-'''if __name__ == "__main__":
-    start_time = time.time()  # Démarre le chronomètre
-    
-    num_simulations = 5_000_000
-    num_cores = multiprocessing.cpu_count()  # Nombre de cœurs disponibles
-    batch_size = num_simulations // num_cores  # Divise en plusieurs groupes
-
-    print(f"Nombre de cœurs disponibles : {num_cores}")
-    print(f"Nombre total de simulations : {num_simulations}")
-    print(f"Nombre de simulations par cœur : {batch_size}")
-
-    with multiprocessing.Pool(processes=num_cores) as pool:
-        results = pool.map(monte_carlo_batch, [batch_size] * num_cores)
-
-    estimated_price = np.mean(results)  # Moyenne des prix simulés
-
-    end_time = time.time()  # Arrête le chronomètre
-    execution_time = end_time - start_time  # Calcule le temps écoulé
-
-    print(f"Prix estimé : {estimated_price}")
-    print(f"Temps total d'exécution : {execution_time:.2f} secondes")'''
 
 Accuracy = 6
 
